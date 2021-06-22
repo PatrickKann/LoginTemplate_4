@@ -1,0 +1,116 @@
+html {
+  font-family: BebasNeue;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background: #3d3d3d;
+}
+
+.box {
+  margin: 120px auto;
+  width: 800px;
+  padding: 40px;
+  background: black;
+  opacity: 0.5;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.box:hover {
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  margin: 0px 0px 30px 0px;
+  background: #ff6b6b;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  display: inline-block;
+} 
+
+h1::after {
+  content: "_";
+  animation: blinkingEffect 0.75s infinite;
+}
+
+
+.box input[type="text"], .box input[type="password"], .box input[type="submit"]{
+  background: none;
+  text-align: left;
+  border: 0px;
+  border-bottom: 2px solid #a1a3a7;
+
+  margin: 0px 0px 50px 0px;
+  padding: 15px 30px;
+  width: 500px;
+
+  outline: none;
+  color: white;
+  transition: 0.5s;
+  font-family: BebasNeue;
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+.box input[type="submit"] {
+  width: 120px;
+  background: #dfe6e9;
+  background-size: 400%;
+  border: 0px;
+  border-radius: 10px;
+  transition: 0.5s;
+  color: black;
+}
+
+.box input[type="submit"]:hover {
+  background: #0984e3;
+}
+
+.box input[type="text"]:focus {
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: #55efc4;
+  color: #55efc4;
+}
+
+.box input[type="password"]:focus  {
+  border-width: 0px 0px 2px 0px;
+  border-style: solid;
+  border-color: #feca57;
+  color: #feca57;
+}
+
+@font-face {
+  font-family: BebasNeue;
+  src: url(../font/BebasNeue.otf) format("opentype");
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes blinkingEffect {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
